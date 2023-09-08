@@ -1,5 +1,6 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { clsx } from "clsx";
+import { Typography } from "@mui/material";
 
 import "./styles.css";
 
@@ -38,7 +39,9 @@ export default function MainTemplate() {
       <main>
         <Outlet />
       </main>
-      <footer>© 2023</footer>
+      <footer>
+        <Typography variant="overline">© 2023</Typography>
+      </footer>
     </>
   );
 }
