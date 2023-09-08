@@ -61,12 +61,18 @@ Designers talk about screen, developers tend to use router. We will use a naming
 /src
     /home
         /HomePage
+            index.js                # The indexation file
+            HomePage.jsx            # The component
+            HomePage.test.jsx       # Test the component
+            styles.css              # The CSS file for HomePage
+            useNews.js              # A hook that it only use once in HomePage
+            useNews.test.js         # The test of the hook
     /contacts
         /ContactsPage
         /ContactPage
     /counters
         /CountersPage
     /hooks
-        index.js                 # Should only be use as an indexation file
+        index.js                    # Should only be use as an indexation file
         /useCounter
 ```
