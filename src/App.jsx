@@ -1,11 +1,26 @@
-import Counter from "./Counter";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import MainTemplate from "./MainTemplate";
+import HomePage from "./home/HomePage";
+import CountersPage from "./counters/CountersPage";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainTemplate />,
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+      {
+        path: "counters",
+        element: <CountersPage />,
+      },
+    ],
+  },
+]);
 
 export default function App() {
-  return (
-    <>
-      <Counter />
-      <Counter initialValue={20} step={2} />
-      <Counter initialValue={-13} />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
