@@ -1,5 +1,5 @@
 import { number } from "prop-types";
-import useCounter from "../useCounter";
+import { useCounter } from "../hooks";
 
 export default function Counter({ initialValue = 0, step = 1 }) {
   const [counter, { increment, decrement }] = useCounter(initialValue, step);
