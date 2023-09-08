@@ -1,0 +1,14 @@
+footer {
+  background-color: teal;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.menu-item {
+  color: red;
+}
+
+.current {
+  font-weight: bold;
+}

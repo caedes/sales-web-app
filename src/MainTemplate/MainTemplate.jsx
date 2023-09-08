@@ -1,18 +1,37 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
+import { clsx } from "clsx";
+
+import "./styles.css";
 
 export default function MainTemplate() {
+  const { pathname } = useLocation();
+
+  const menu = [
+    {
+      to: "/",
+      label: "Home",
+    },
+    {
+      to: "/counters",
+      label: "Counters",
+    },
+  ];
+
   return (
     <>
       <header>
         <nav>
           <ol>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/counters">Counters</Link>
-            </li>
-            <li>Menu 3</li>
+            {menu.map(({ to, label }) => (
+              <li key={label}>
+                <Link
+                  to={to}
+                  className={clsx("menu-item", { current: to === pathname })}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ol>
         </nav>
       </header>
