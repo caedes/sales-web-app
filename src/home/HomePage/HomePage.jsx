@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, LinearProgress } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 
 import { ProductCondition } from "../ProductCondition";
@@ -11,8 +11,7 @@ import { useProducts } from "../../hooks";
 export default function HomePage() {
   const { isLoading, error, data: products } = useProducts();
 
-  // TODO Utilisons un composant MUI
-  if (isLoading) return "Loading…";
+  if (isLoading) return <LinearProgress />;
 
   // TODO Est-ce qu'on pourrait pas utiliser un message d'erreur
   // pour l'utilisateur à la hauteur de l'app entière ?
