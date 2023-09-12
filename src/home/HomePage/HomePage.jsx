@@ -15,6 +15,8 @@ export default function HomePage() {
 
   // TODO Est-ce qu'on pourrait pas utiliser un message d'erreur
   // pour l'utilisateur à la hauteur de l'app entière ?
+  // https://github.com/bvaughn/react-error-boundary#readme
+  // https://mui.com/material-ui/react-snackbar/#customization
   if (error) return "oulala";
 
   const productColumns = [
