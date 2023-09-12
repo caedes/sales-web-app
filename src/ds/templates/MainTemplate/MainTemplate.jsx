@@ -9,7 +9,6 @@ import {
   Typography,
 } from "@mui/material";
 
-import "./styles.js";
 import { Button, Footer } from "./styles.js";
 
 export default function MainTemplate() {
