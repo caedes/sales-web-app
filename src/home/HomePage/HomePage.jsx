@@ -1,25 +1,15 @@
 import { Box } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
-import { useEffect, useState } from "react";
 
 import { ProductCondition } from "../ProductCondition";
 import { ProductDescription } from "../ProductDescription";
 import { ProductImage } from "../ProductImage";
 import { ProductPrice } from "../ProductPrice";
 import { withRow } from "../../hoc";
+import { useProducts } from "../../hooks";
 
 export default function HomePage() {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const response = await fetch("http://localhost:3001/products");
-      const data = await response.json();
-      setProducts(data);
-    };
-
-    fetchProducts();
-  }, []);
+  const { products } = useProducts();
 
   const productColumns = [
     {
