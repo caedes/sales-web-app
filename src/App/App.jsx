@@ -1,7 +1,7 @@
 import { RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
-import { QueryClientProvider } from "react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
 
 import { router } from "./router";
 import { theme } from "./theme";
