@@ -9,7 +9,14 @@ import { withRow } from "../../hoc";
 import { useProducts } from "../../hooks";
 
 export default function HomePage() {
-  const { products } = useProducts();
+  const { isLoading, error, data: products } = useProducts();
+
+  // TODO Utilisons un composant MUI
+  if (isLoading) return "Loading…";
+
+  // TODO Est-ce qu'on pourrait pas utiliser un message d'erreur
+  // pour l'utilisateur à la hauteur de l'app entière ?
+  if (error) return "oulala";
 
   const productColumns = [
     {

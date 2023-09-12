@@ -1,17 +1,9 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "react-query";
 
 export default function useProducts() {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const response = await fetch("http://localhost:3001/products");
-      const data = await response.json();
-      setProducts(data);
-    };
-
-    fetchProducts();
-  }, []);
-
-  return { products };
+  return useQuery(["products"], () =>
+    // TODO localhost ? Really?
+    // TODO Client HTTP ? Axios ? Ky ?
+    fetch("http://localhost:3001/products").then((response) => response.json()),
+  );
 }
