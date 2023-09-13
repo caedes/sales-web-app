@@ -1,5 +1,9 @@
 # Sales Web App
 
+> Created and maintained by the mega poerful team: [Referential Canal de Vente](https://confluence.cdiscount.com/x/IAwHEQ)
+
+---
+
 ## Getting Started
 
 Install dependencies:
