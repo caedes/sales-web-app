@@ -89,3 +89,9 @@ Designers talk about screen, developers tend to use router. We will use a naming
         index.js                    # Should only be use as an indexation file
         /useCounter
 ```
+
+## Requests
+
+To handle all our requests we use a proxy over [Axios](https://github.com/axios/axios#readme) named [salesHttpClient](./src/salesHttpClient/index.js).
+
+And of course to add/manipulate the response on our components we use [ReactQuery](https://tanstack.com/query/v3/docs/react/overview).
