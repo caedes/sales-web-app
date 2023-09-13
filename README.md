@@ -99,3 +99,14 @@ Designers talk about screen, developers tend to use router. We will use a naming
 To handle all our requests we use a proxy over [Axios](https://github.com/axios/axios#readme) named [salesHttpClient](./src/salesHttpClient/index.js).
 
 And of course to add/manipulate the response on our components we use [ReactQuery](https://tanstack.com/query/v3/docs/react/overview).
+
+## Project Managament Triangle
+
+Simplified.
+
+- Scope + : Cost +
+- Scope - : Time -
+- Cost - : Scope -
+- Cost + : Time +
+- Time - : Scope -
+- Time + : Scope +
