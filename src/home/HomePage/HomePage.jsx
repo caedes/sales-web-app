@@ -15,7 +15,7 @@ import { ProductDescription } from "../ProductDescription";
 import { ProductImage } from "../ProductImage";
 import { ProductPrice } from "../ProductPrice";
 import { withRow } from "../../hoc";
-import { useCondition, useProducts } from "../../hooks";
+import { useProductSearch, useProducts } from "../../hooks";
 
 const conditionTypes = [
   {
@@ -58,8 +58,12 @@ const productColumns = [
 ];
 
 export default function HomePage() {
-  const [condition, setCondition] = useCondition();
-  const { isLoading, error, data: products } = useProducts({ condition });
+  const { condition, search, setCondition, setSearch } = useProductSearch();
+  const {
+    isLoading,
+    error,
+    data: products,
+  } = useProducts({ condition, search });
 
   // TODO Est-ce qu'on pourrait pas utiliser un message d'erreur
   // pour l'utilisateur à la hauteur de l'app entière ?
@@ -70,7 +74,13 @@ export default function HomePage() {
   return (
     <>
       <Stack direction="row" justifyContent="center" spacing={6} sx={{ my: 4 }}>
-        <TextField label="Recherche" sx={{ width: 400 }} />
+        <TextField
+          label="Recherche"
+          sx={{ width: 400 }}
+          autoComplete="off"
+          value={search}
+          onChange={setSearch}
+        />
         <FormControl>
           <FormLabel id="condition-label">Condition</FormLabel>
           <RadioGroup
