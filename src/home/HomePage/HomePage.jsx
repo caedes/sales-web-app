@@ -10,10 +10,10 @@ import {
 } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 
-import { ProductCondition } from "../ProductCondition";
-import { ProductDescription } from "../ProductDescription";
-import { ProductImage } from "../ProductImage";
-import { ProductPrice } from "../ProductPrice";
+import { ProductCondition } from "../../products/ProductCondition";
+import { ProductDescription } from "../../products/ProductDescription";
+import { ProductImage } from "../../products/ProductImage";
+import { ProductPrice } from "../../products/ProductPrice";
 import { withRow } from "../../hoc";
 import { useProductSearch, useProducts } from "../../hooks";
 

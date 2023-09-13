@@ -10,6 +10,7 @@ import { oneOf } from "prop-types";
  * @returns {React.ReactElement}
  */
 export default function ProductCondition({ condition }) {
+  // TODO Ce serait mieux avec un tag/label, Chip MUI
   return condition === "new" ? "Neuf" : "Occasion";
 }
 
