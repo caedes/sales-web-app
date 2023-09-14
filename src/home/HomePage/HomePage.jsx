@@ -10,11 +10,7 @@ import {
 } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 
-import { ProductCondition } from "../../products/ProductCondition";
-import { ProductDescription } from "../../products/ProductDescription";
-import { ProductImage } from "../../products/ProductImage";
-import { ProductPrice } from "../../products/ProductPrice";
-import { withRow } from "../../hoc";
+import { productColumns } from "../../products/productColums";
 import { useProductSearch, useProducts } from "../../hooks";
 
 const conditionTypes = [
@@ -30,31 +26,6 @@ const conditionTypes = [
     label: "Occasion",
     value: "used",
   },
-];
-
-const productColumns = [
-  {
-    field: "imageUrl",
-    headerName: "Image produit",
-    renderCell: withRow(ProductImage),
-  },
-  {
-    field: "description",
-    headerName: "Description",
-    flex: 1,
-    renderCell: withRow(ProductDescription),
-  },
-  {
-    field: "price",
-    headerName: "Prix",
-    renderCell: withRow(ProductPrice),
-  },
-  {
-    field: "condition",
-    headerName: "État",
-    renderCell: withRow(ProductCondition),
-  },
-  { field: "stock", headerName: "Stock" },
 ];
 
 export default function HomePage() {

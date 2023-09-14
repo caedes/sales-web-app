@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { salesHttpClient } from "../salesHttpClient";
 
-export default function useProducts({ condition, search }) {
+export default function useProducts({ condition, search } = {}) {
   const searchParams = new URLSearchParams();
 
   if (condition) searchParams.set("condition", condition);
