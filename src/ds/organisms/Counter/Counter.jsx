@@ -8,7 +8,11 @@ export default function Counter({ initialValue = 0, step = 1 }) {
   const [counter, { increment, decrement }] = useCounter(initialValue, step);
 
   return (
-    <Card sx={{ maxWidth: 200, margin: "1rem" }} elevation={5}>
+    <Card
+      sx={{ maxWidth: 200, margin: "1rem" }}
+      elevation={5}
+      aria-label="counter"
+    >
       <CardContent>
         <Typography variant="h2" component="h6">
           {counter}
