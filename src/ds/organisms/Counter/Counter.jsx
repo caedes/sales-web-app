@@ -10,7 +10,7 @@ export default function Counter({ initialValue = 0, step = 1 }) {
   return (
     <Card sx={{ maxWidth: 200, margin: "1rem" }} elevation={5}>
       <CardContent>
-        <Typography variant="h2" component="p">
+        <Typography variant="h2" component="h6">
           {counter}
         </Typography>
         <ButtonGroup variant="outlined">
