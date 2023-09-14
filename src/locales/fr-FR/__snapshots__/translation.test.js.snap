@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`fr-FR translation > writes all translations 1`] = `
+{
+  "greetings": "Salutations",
+  "hello": "Bonjour",
+  "hi": "Salut",
+  "products": {
+    "count_one": "1 produit",
+    "count_other": "<1>{{count}}</1> produits",
+    "count_zero": "Pas de produit",
+    "title": "Produits",
+  },
+}
+`;

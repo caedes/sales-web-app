@@ -1,0 +1,11 @@
+{
+  "greetings": "Salutations",
+  "hello": "Bonjour",
+  "hi": "Salut",
+  "products": {
+    "title": "Produits",
+    "count_zero": "Pas de produit",
+    "count_one": "1 produit",
+    "count_other": "<1>{{count}}</1> produits"
+  }
+}
