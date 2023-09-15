@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import { number, oneOf } from "prop-types";
 
 const availableCurrencies = ["EUR", "USD"];
@@ -11,10 +12,12 @@ const availableCurrencies = ["EUR", "USD"];
  * @returns {React.ReactElement}
  */
 export default function Price({ value, currency = "EUR" }) {
-  return new Intl.NumberFormat(window.navigator.language, {
+  const formattedPrice = new Intl.NumberFormat(window.navigator.language, {
     style: "currency",
     currency,
   }).format(value);
+
+  return <Typography>{formattedPrice}</Typography>;
 }
 
 Price.propTypes = {

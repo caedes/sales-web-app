@@ -17,7 +17,7 @@ export default function Counter({ initialValue = 0, step = 1 }) {
         <Typography variant="h2" component="h6">
           {counter}
         </Typography>
-        <ButtonGroup variant="outlined">
+        <ButtonGroup>
           <Button onClick={increment}>+{step}</Button>
           <Button onClick={decrement}>-{step}</Button>
         </ButtonGroup>

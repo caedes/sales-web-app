@@ -1,3 +1,4 @@
+import { Chip } from "@mui/material";
 import { oneOf } from "prop-types";
 
 /**
@@ -10,8 +11,13 @@ import { oneOf } from "prop-types";
  * @returns {React.ReactElement}
  */
 export default function ProductCondition({ condition }) {
-  // TODO Ce serait mieux avec un tag/label, Chip MUI
-  return condition === "new" ? "Neuf" : "Occasion";
+  return (
+    <Chip
+      label={condition === "new" ? "Neuf" : "Occasion"}
+      variant="outlined"
+      size="small"
+    />
+  );
 }
 
 ProductCondition.propTypes = {
