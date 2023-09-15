@@ -8,7 +8,6 @@ import { FavoritesContext } from "./contexts";
 const queryClient = new QueryClient();
 
 const customRender = (ui, options = {}) => {
-  // eslint-disable-next-line react-refresh/only-export-components
   const TestApp = ({ children }) => (
     <QueryClientProvider client={queryClient}>
       <FavoritesContext.Provider>
