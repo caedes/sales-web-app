@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
+    "build-storybook": "storybook build",
     "commit": "git-cz",
     "dev": "vite --port 3000",
     "dev:api": "json-server --watch --port 3001 db.json",
@@ -12,6 +13,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "prepare": "husky install",
     "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
     "test": "vitest",
     "test:coverage": "vitest run --coverage"
   },
@@ -34,6 +36,14 @@
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
+    "@storybook/addon-essentials": "^7.4.2",
+    "@storybook/addon-interactions": "^7.4.2",
+    "@storybook/addon-links": "^7.4.2",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.4.2",
+    "@storybook/react": "^7.4.2",
+    "@storybook/react-vite": "^7.4.2",
+    "@storybook/testing-library": "^0.2.1",
     "@testing-library/jest-dom": "^6.1.3",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
@@ -47,6 +57,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "eslint-plugin-storybook": "^0.6.13",
     "eslint-plugin-vitest": "^0.3.1",
     "eslint-plugin-vitest-globals": "^1.4.0",
     "git-cz": "^4.9.0",
@@ -57,6 +68,7 @@
     "msw": "^1.3.1",
     "prettier": "^3.0.3",
     "prettier-plugin-packagejson": "^2.4.5",
+    "storybook": "^7.4.2",
     "vite": "^4.4.5",
     "vitest": "^0.34.4"
   }
