@@ -11,7 +11,7 @@ import {
 import { DataGrid } from "@mui/x-data-grid";
 
 import { productColumns } from "../../products/productColums";
-import { useProductSearch, useProducts } from "../../hooks";
+import { useProductSearch, useProducts } from "@/hooks";
 
 const conditionTypes = [
   {

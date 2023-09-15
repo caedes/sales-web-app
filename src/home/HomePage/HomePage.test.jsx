@@ -1,8 +1,8 @@
-import { render, screen, waitForElementToBeRemoved } from "../../test-utils";
+import { render, screen, waitForElementToBeRemoved } from "@/test-utils";
 import { describe, expect, it } from "vitest";
 
 import { HomePage } from "./";
-import { products } from "../../fixtures";
+import { products } from "@/fixtures";
 
 const radio = (name) => screen.getByRole("radio", { name });
 const progressbar = () => screen.getByRole("progressbar");

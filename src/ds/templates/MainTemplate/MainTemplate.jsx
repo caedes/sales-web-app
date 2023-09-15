@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 
 import { Button, Footer } from "./styles.js";
-import { FavoritesContext } from "../../../contexts";
+import { FavoritesContext } from "@/contexts";
 
 export default function MainTemplate() {
   const { pathname } = useLocation();

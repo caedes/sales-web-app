@@ -3,7 +3,7 @@ import { ProductImage } from "../ProductImage";
 import { ProductPrice } from "../ProductPrice";
 import { ProductCondition } from "../ProductCondition";
 import { useParams } from "react-router-dom";
-import { useProduct } from "../../hooks";
+import { useProduct } from "@/hooks";
 
 // TODO Réutilisation du layout de la page, les Grids
 export default function ProductPage() {

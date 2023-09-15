@@ -94,6 +94,12 @@ Designers talk about screen, developers tend to use router. We will use a naming
         /useCounter
 ```
 
+## Import Aliases
+
+We use Vite import aliases on this app, check the [vite.config.js](./vite.config.js).
+
+Please do NOT use a global @ for all our `/src`` subfolders, it will bloated all the reative import interest.
+
 ## Requests
 
 To handle all our requests we use a proxy over [Axios](https://github.com/axios/axios#readme) named [salesHttpClient](./src/salesHttpClient/index.js).

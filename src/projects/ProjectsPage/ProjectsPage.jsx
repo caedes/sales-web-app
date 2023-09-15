@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 
-import { useConstraints } from "../../hooks";
+import { useConstraints } from "@/hooks";
 
 const constraints = [
   {

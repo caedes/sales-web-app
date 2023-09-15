@@ -1,6 +1,6 @@
 import { number } from "prop-types";
 
-import { Price } from "../../ds/atoms";
+import { Price } from "@/ds/atoms";
 
 export default function ProductPrice({ price }) {
   return <Price value={price} />;

@@ -1,8 +1,8 @@
 import { LinearProgress, Typography } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { productColumns } from "../productColums";
-import { useProductsByIds } from "../../hooks";
-import { FavoritesContext } from "../../contexts";
+import { useProductsByIds } from "@/hooks";
+import { FavoritesContext } from "@/contexts";
 
 export default function FavoritesPage() {
   const { favorites } = FavoritesContext.useContext();
